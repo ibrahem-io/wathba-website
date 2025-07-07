@@ -34,7 +34,7 @@ const TrustIndicators: React.FC = () => {
 
   return (
     <div className="bg-white border-y border-gray-100 py-4">
-      <div className="container">
+      <div className="center-content">
         <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
           {indicators.map((indicator, index) => (
             <div
