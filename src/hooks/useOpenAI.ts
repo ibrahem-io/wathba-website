@@ -19,7 +19,7 @@ export const useOpenAI = (options: UseOpenAIOptions = {}) => {
   const apiKey = options.apiKey || import.meta.env.VITE_OPENAI_API_KEY;
   const model = options.model || import.meta.env.VITE_OPENAI_MODEL || 'gpt-4';
 
-  const systemPrompt = `You are a virtual presales engineer for Wathbah Consulting, Saudi Arabia's leading technology and management consulting firm. Your role is to help potential clients discover how our services can transform their operations.
+  const systemPrompt = `You are a virtual presales engineer for Wathbah Consulting, Saudi Arabia's technology and management consulting firm. Your role is to help potential clients discover how our services can transform their operations.
 
 ABOUT WATHBAH CONSULTING:
 - Technology and management consulting firm where Saudi passion meets global excellence
@@ -57,7 +57,7 @@ At the end of meaningful conversations, offer to schedule a consultation: "Would
 
   const sendMessage = useCallback(async (messages: Message[]): Promise<string> => {
     if (!apiKey) {
-      throw new Error('OpenAI API key not configured');
+      throw new Error('OpenAI API key not configured - using simulation mode');
     }
 
     setIsLoading(true);
@@ -84,7 +84,7 @@ At the end of meaningful conversations, offer to schedule a consultation: "Would
       });
 
       if (!response.ok) {
-        throw new Error(`OpenAI API error: ${response.status}`);
+        throw new Error(`OpenAI API error: ${response.status} - ${response.statusText}`);
       }
 
       const data = await response.json();

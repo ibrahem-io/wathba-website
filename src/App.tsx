@@ -13,7 +13,6 @@ import Agencies from './components/Agencies';
 import Security from './components/Security';
 import About from './components/About';
 import Contact from './components/Contact';
-import AIExpertChat from './components/AIExpertChat';
 
 const AppContent: React.FC = () => {
   useRTL();
@@ -71,7 +70,6 @@ const AppContent: React.FC = () => {
           </Suspense>
         </div>
       </main>
-      <AIExpertChat />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import AIExpertChat from './AIExpertChat';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ArrowRight, Sparkles, Brain, Zap, Shield, TrendingUp, Users, Clock, CheckCircle, Play, Download, Globe, Star } from 'lucide-react';
@@ -8,6 +9,7 @@ const Hero: React.FC = () => {
   const [typedText, setTypedText] = useState('');
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
+  const [showChat, setShowChat] = useState(false);
 
   const heroWords = language === 'ar' 
     ? ['الابتكار', 'التحول الرقمي', 'المستقبل', 'التميز']
@@ -185,6 +187,7 @@ const Hero: React.FC = () => {
           {/* Enhanced Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button
+              onClick={() => setShowChat(true)}
               size="lg"
               className="group bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-10 py-4 text-lg font-medium rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center space-x-3 rtl:space-x-reverse relative overflow-hidden"
             >
@@ -279,6 +282,12 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* AI Expert Chat Integration */}
+      <AIExpertChat 
+        isOpen={showChat} 
+        onOpenChange={setShowChat} 
+      />
     </section>
   );
 };

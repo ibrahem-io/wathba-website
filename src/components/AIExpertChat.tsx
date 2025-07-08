@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useOpenAI } from '@/hooks/useOpenAI';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -25,8 +26,14 @@ interface Message {
   timestamp: Date;
 }
 
-const AIExpertChat: React.FC = () => {
+interface AIExpertChatProps {
+  isOpen?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}
+
+const AIExpertChat: React.FC<AIExpertChatProps> = ({ isOpen: externalIsOpen, onOpenChange }) => {
   const { language } = useLanguage();
+  const { sendMessage: sendOpenAIMessage, isLoading: openAILoading, error: openAIError } = useOpenAI();
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -36,6 +43,16 @@ const AIExpertChat: React.FC = () => {
   const [conversationCount, setConversationCount] = useState(0);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Handle external control of chat state
+  useEffect(() => {
+    if (externalIsOpen !== undefined) {
+      setIsOpen(externalIsOpen);
+      if (onOpenChange && isOpen !== externalIsOpen) {
+        onOpenChange(externalIsOpen);
+      }
+    }
+  }, [externalIsOpen, onOpenChange, isOpen]);
 
   // Initial greeting message
   useEffect(() => {
@@ -80,7 +97,31 @@ const AIExpertChat: React.FC = () => {
     setConversationCount(prev => prev + 1);
 
     try {
-      // Simulate API call to OpenAI
+      // Try to use real OpenAI API first
+      if (import.meta.env.VITE_OPENAI_API_KEY) {
+        try {
+          const openAIMessages = messages.map(msg => ({
+            role: msg.role,
+            content: msg.content
+          }));
+          
+          const response = await sendOpenAIMessage([...openAIMessages, { role: 'user', content: inputValue }]);
+          
+          const assistantMessage: Message = {
+            id: (Date.now() + 1).toString(),
+            content: response,
+            role: 'assistant',
+            timestamp: new Date()
+          };
+
+          setMessages(prev => [...prev, assistantMessage]);
+          return;
+        } catch (openAIErr) {
+          console.warn('OpenAI API failed, falling back to simulation:', openAIErr);
+        }
+      }
+
+      // Fallback to simulation
       const response = await simulateOpenAIResponse(inputValue, messages, language);
       
       const assistantMessage: Message = {
@@ -109,6 +150,11 @@ const AIExpertChat: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleOpenChange = (newIsOpen: boolean) => {
+    setIsOpen(newIsOpen);
+    onOpenChange?.(newIsOpen);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -144,7 +190,7 @@ const AIExpertChat: React.FC = () => {
       {!isOpen && (
         <div className="fixed bottom-6 right-6 z-50">
           <Button
-            onClick={() => setIsOpen(true)}
+            onClick={() => handleOpenChange(true)}
             className="group bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-bounce"
           >
             <MessageCircle className="h-6 w-6 group-hover:animate-pulse" />
@@ -196,7 +242,7 @@ const AIExpertChat: React.FC = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => handleOpenChange(false)}
                     className="text-white hover:bg-white/20 p-1 h-8 w-8"
                   >
                     <X className="h-4 w-4" />
@@ -244,7 +290,7 @@ const AIExpertChat: React.FC = () => {
                     </div>
                   ))}
                   
-                  {isLoading && (
+                  {(isLoading || openAILoading) && (
                     <div className="flex justify-start">
                       <div className="flex items-center space-x-2 rtl:space-x-reverse">
                         <div className="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center">
@@ -302,11 +348,11 @@ const AIExpertChat: React.FC = () => {
                       onKeyPress={handleKeyPress}
                       placeholder={language === 'ar' ? 'اكتب رسالتك هنا...' : 'Type your message here...'}
                       className="flex-1 text-right"
-                      disabled={isLoading}
+                      disabled={isLoading || openAILoading}
                     />
                     <Button
                       onClick={sendMessage}
-                      disabled={!inputValue.trim() || isLoading}
+                      disabled={!inputValue.trim() || isLoading || openAILoading}
                       className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-4"
                     >
                       <Send className="h-4 w-4" />
@@ -315,8 +361,16 @@ const AIExpertChat: React.FC = () => {
                   
                   <p className="text-xs text-gray-500 mt-2 text-center">
                     {language === 'ar' 
-                      ? 'مدعوم بالذكاء الاصطناعي • استشارة مجانية'
-                      : 'Powered by AI • Free Consultation'
+                      ? openAIError 
+                        ? 'وضع المحاكاة • استشارة مجانية'
+                        : import.meta.env.VITE_OPENAI_API_KEY 
+                          ? 'مدعوم بالذكاء الاصطناعي • استشارة مجانية'
+                          : 'وضع المحاكاة • استشارة مجانية'
+                      : openAIError
+                        ? 'Simulation Mode • Free Consultation'
+                        : import.meta.env.VITE_OPENAI_API_KEY
+                          ? 'Powered by AI • Free Consultation'
+                          : 'Simulation Mode • Free Consultation'
                     }
                   </p>
                 </div>
