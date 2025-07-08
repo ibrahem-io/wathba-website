@@ -89,7 +89,7 @@ const TabNavigation: React.FC<TabNavigationProps> = ({ activeTab, setActiveTab }
                 className={`
                   relative min-w-fit px-4 py-2 rounded-xl font-medium transition-all duration-300 group
                   ${isActive 
-                    ? `bg-gradient-to-r ${tab.gradient} text-white shadow-lg scale-105` 
+                    ? `bg-gradient-to-r ${tab.gradient} text-white shadow-lg scale-105 transform` 
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                   }
                 `}
@@ -106,13 +106,18 @@ const TabNavigation: React.FC<TabNavigationProps> = ({ activeTab, setActiveTab }
                 
                 {/* Active indicator */}
                 {isActive && (
-                  <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white rounded-full shadow-lg"></div>
+                  <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white rounded-full shadow-lg animate-pulse"></div>
                 )}
                 
                 {/* Hover effect */}
                 {!isActive && (
-                  <div className={`absolute inset-0 bg-gradient-to-r ${tab.gradient} opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-300`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-r ${tab.gradient} opacity-0 group-hover:opacity-10 rounded-xl transition-all duration-300 group-hover:scale-105`}></div>
                 )}
+                
+                {/* Ripple effect on click */}
+                <div className="absolute inset-0 rounded-xl overflow-hidden">
+                  <div className={`absolute inset-0 bg-gradient-to-r ${tab.gradient} opacity-0 group-active:opacity-20 transition-opacity duration-150`}></div>
+                </div>
               </Button>
             );
           })}

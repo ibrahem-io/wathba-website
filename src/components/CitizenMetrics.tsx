@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import SkeletonCard from './SkeletonCard';
 import { TrendingUp, Clock, Users, CheckCircle } from 'lucide-react';
 
 const CitizenMetrics: React.FC = () => {
   const { language } = useLanguage();
+  const [isLoading, setIsLoading] = useState(true);
   const [animatedValues, setAnimatedValues] = useState({
     processing: 0,
     waitTime: 0,
@@ -20,6 +22,11 @@ const CitizenMetrics: React.FC = () => {
   };
 
   useEffect(() => {
+    // Simulate loading
+    const loadingTimer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+
     const animateCounters = () => {
       const duration = 2000; // 2 seconds
       const steps = 60;
@@ -45,8 +52,9 @@ const CitizenMetrics: React.FC = () => {
     };
 
     // Start animation after component mounts
-    const startDelay = setTimeout(animateCounters, 500);
+    const startDelay = setTimeout(animateCounters, 1300);
     return () => {
+      clearTimeout(loadingTimer);
       clearTimeout(startDelay);
     };
   }, []);
@@ -106,7 +114,12 @@ const CitizenMetrics: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {metrics.map((metric, index) => (
+          {isLoading ? (
+            [...Array(4)].map((_, index) => (
+              <SkeletonCard key={index} variant="metric" />
+            ))
+          ) : (
+            metrics.map((metric, index) => (
             <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:scale-105">
               <CardHeader className="text-center pb-4">
                 <div className={`w-16 h-16 rounded-lg ${metric.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
@@ -140,7 +153,8 @@ const CitizenMetrics: React.FC = () => {
                 </div>
               </CardContent>
             </Card>
-          ))}
+          ))
+          )}
         </div>
 
         {/* Additional Impact Metrics */}

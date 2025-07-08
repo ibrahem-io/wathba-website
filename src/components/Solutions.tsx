@@ -1,12 +1,24 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import SkeletonCard from './SkeletonCard';
 import { Building2, Users, BarChart3, FileText, Shield, MapPin, ArrowRight, TrendingUp, Brain, Zap, Sparkles } from 'lucide-react';
 
 const Solutions: React.FC = () => {
   const { language, t } = useLanguage();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading for demonstration
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const solutions = [
     {
@@ -113,13 +125,20 @@ const Solutions: React.FC = () => {
 
         {/* Solutions Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {solutions.map((solution, index) => (
+          {isLoading ? (
+            // Loading Skeletons
+            [...Array(6)].map((_, index) => (
+              <SkeletonCard key={index} variant="ai" />
+            ))
+          ) : (
+            solutions.map((solution, index) => (
             <Card 
               key={index} 
-              className="group cursor-pointer transition-all duration-300 hover:shadow-xl border-gray-200 hover:scale-105 bg-white/80 backdrop-blur-sm"
+              className="group cursor-pointer transition-all duration-500 hover:shadow-xl border-gray-200 hover:scale-105 bg-white/80 backdrop-blur-sm animate-fade-in"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader className="text-center pb-4">
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${solution.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${solution.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
                   <solution.icon className="h-8 w-8 text-white" />
                 </div>
                 
@@ -161,7 +180,7 @@ const Solutions: React.FC = () => {
                 
                 <Button 
                   variant="ghost" 
-                  className="w-full text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 transition-colors group-hover:bg-indigo-100"
+                  className="w-full text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 transition-all duration-300 group-hover:bg-indigo-100 group-hover:scale-105"
                 >
                   <Brain className="mr-2 h-4 w-4" />
                   {language === 'ar' ? 'جرب الذكاء الاصطناعي' : 'Try AI Solution'}
@@ -169,7 +188,8 @@ const Solutions: React.FC = () => {
                 </Button>
               </CardContent>
             </Card>
-          ))}
+          ))
+          )}
         </div>
 
         {/* AI Platform Showcase */}
