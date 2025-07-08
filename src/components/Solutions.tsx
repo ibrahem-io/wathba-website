@@ -7,7 +7,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import SkeletonCard from './SkeletonCard';
 import { 
   Building2, Users, BarChart3, FileText, Shield, MapPin, ArrowRight, TrendingUp, 
-  Brain, Zap, Sparkles, Globe, Code, Database, Cloud, Smartphone, Monitor, Cog 
+  Brain, Zap, Sparkles, Globe, Code, Database, Cloud, Smartphone, Monitor, Cog, CheckCircle 
 } from 'lucide-react';
 
 const Solutions: React.FC = () => {
