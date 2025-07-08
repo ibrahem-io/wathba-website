@@ -26,17 +26,17 @@ const Contact: React.FC = () => {
       icon: Mail,
       titleAr: 'البريد الإلكتروني',
       titleEn: 'Email',
-      value: 'info@wathba.sa',
+      value: 'info@wathbaconsulting.com',
       color: 'bg-blue-100 text-blue-700',
-      action: 'mailto:info@wathba.sa'
+      action: 'mailto:info@wathbaconsulting.com'
     },
     {
       icon: Phone,
       titleAr: 'الهاتف',
       titleEn: 'Phone',
-      value: '+966 11 123 4567',
+      value: '+966 11 456 7890',
       color: 'bg-green-100 text-green-700',
-      action: 'tel:+966111234567'
+      action: 'tel:+966114567890'
     },
     {
       icon: MapPin,
@@ -50,27 +50,29 @@ const Contact: React.FC = () => {
       icon: Clock,
       titleAr: 'ساعات العمل',
       titleEn: 'Working Hours',
-      value: language === 'ar' ? 'الأحد - الخميس: 8:00 ص - 5:00 م' : 'Sunday - Thursday: 8:00 AM - 5:00 PM',
+      value: language === 'ar' ? 'الأحد - الخميس: 9:00 ص - 6:00 م' : 'Sunday - Thursday: 9:00 AM - 6:00 PM',
       color: 'bg-orange-100 text-orange-700',
       action: '#'
     }
   ];
 
   const industries = [
-    { valueAr: 'حكومي', valueEn: 'Government' },
-    { valueAr: 'مصرفي', valueEn: 'Banking' },
-    { valueAr: 'تعليمي', valueEn: 'Education' },
-    { valueAr: 'صحي', valueEn: 'Healthcare' },
-    { valueAr: 'تجاري', valueEn: 'Retail' },
+    { valueAr: 'الشركات الكبرى', valueEn: 'Corporate Enterprises' },
+    { valueAr: 'الجهات الحكومية', valueEn: 'Government Entities' },
+    { valueAr: 'الشركات الناشئة والتقنية', valueEn: 'Startups & Tech Companies' },
+    { valueAr: 'الرعاية الصحية وعلوم الحياة', valueEn: 'Healthcare & Life Sciences' },
+    { valueAr: 'التعليم', valueEn: 'Education' },
+    { valueAr: 'الخدمات المالية', valueEn: 'Financial Services' },
     { valueAr: 'أخرى', valueEn: 'Other' }
   ];
 
   const projectTypes = [
-    { valueAr: 'تطوير تطبيقات', valueEn: 'App Development' },
-    { valueAr: 'ذكاء اصطناعي', valueEn: 'AI Solutions' },
+    { valueAr: 'الوعي بالبيانات والذكاء الاصطناعي', valueEn: 'Data & AI Awareness' },
+    { valueAr: 'تحديد وتنفيذ حالات استخدام الذكاء الاصطناعي', valueEn: 'AI Use Case Identification & Implementation' },
+    { valueAr: 'إدارة المعرفة المدعومة بالذكاء الاصطناعي', valueEn: 'AI Powered Knowledge Management' },
     { valueAr: 'تحول رقمي', valueEn: 'Digital Transformation' },
-    { valueAr: 'استشارات تقنية', valueEn: 'Tech Consulting' },
-    { valueAr: 'أمن سيبراني', valueEn: 'Cybersecurity' }
+    { valueAr: 'استشارات إدارية', valueEn: 'Management Consulting' },
+    { valueAr: 'استراتيجية التكنولوجيا والابتكار', valueEn: 'Technology & Innovation Strategy' }
   ];
 
   const handleInputChange = (field: string, value: string) => {
@@ -290,13 +292,13 @@ const Contact: React.FC = () => {
                 <div className="flex items-center space-x-2 rtl:space-x-reverse">
                   <CheckCircle className="h-4 w-4 text-green-600" />
                   <span className="text-sm text-green-700">
-                    {language === 'ar' ? 'استشارة مجانية' : 'Free consultation'}
+                    {language === 'ar' ? 'استشارة أولية مجانية' : 'Free initial consultation'}
                   </span>
                 </div>
                 <div className="flex items-center space-x-2 rtl:space-x-reverse">
                   <CheckCircle className="h-4 w-4 text-green-600" />
                   <span className="text-sm text-green-700">
-                    {language === 'ar' ? 'فريق متخصص' : 'Expert team'}
+                    {language === 'ar' ? 'فريق خبراء متخصص' : 'Expert specialized team'}
                   </span>
                 </div>
               </div>
@@ -309,7 +311,7 @@ const Contact: React.FC = () => {
               <CardHeader>
                 <div className="flex items-center justify-between mb-4">
                   <CardTitle className="text-2xl font-bold text-gray-900">
-                    {language === 'ar' ? 'ابدأ مشروعك معنا' : 'Start Your Project With Us'}
+                    {language === 'ar' ? 'ابدأ رحلتك معنا' : 'Start Your Journey With Us'}
                   </CardTitle>
                   <Badge variant="outline" className="text-indigo-600 border-indigo-300">
                     {language === 'ar' ? `الخطوة ${formStep} من 3` : `Step ${formStep} of 3`}
@@ -326,8 +328,8 @@ const Contact: React.FC = () => {
                 
                 <CardDescription className="text-right">
                   {language === 'ar' 
-                    ? 'املأ النموذج وسنتواصل معك خلال 24 ساعة'
-                    : 'Fill out the form and we\'ll get back to you within 24 hours'
+                    ? 'املأ النموذج وسنتواصل معك خلال 24 ساعة لمناقشة احتياجاتك'
+                    : 'Fill out the form and we\'ll get back to you within 24 hours to discuss your needs'
                   }
                 </CardDescription>
               </CardHeader>

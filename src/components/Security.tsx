@@ -13,106 +13,106 @@ const Security: React.FC = () => {
   const securityFeatures = [
     {
       icon: Shield,
-      titleAr: 'النشر المعزول (Air-gapped)',
-      titleEn: 'Air-gapped Deployment',
-      descAr: 'بيئات منعزلة تماماً عن الإنترنت لضمان أقصى درجات الأمان للبيانات الحساسة',
-      descEn: 'Completely isolated environments from the internet ensuring maximum security for sensitive data',
+      titleAr: 'التنوع',
+      titleEn: 'Diversity',
+      descAr: 'مزيج من وجهات النظر العالمية والخبرة المحلية يثري حلولنا ويجعلها أكثر شمولية وفعالية',
+      descEn: 'A mix of global perspectives and local expertise enriches our solutions and makes them more comprehensive and effective',
       color: 'bg-red-100 text-red-700'
     },
     {
       icon: Lock,
-      titleAr: 'التشفير من النقطة إلى النقطة',
-      titleEn: 'End-to-End Encryption',
-      descAr: 'تشفير AES-256 متقدم لجميع البيانات أثناء النقل والتخزين مع إدارة مفاتيح آمنة',
-      descEn: 'Advanced AES-256 encryption for all data in transit and at rest with secure key management',
+      titleAr: 'الانفتاح',
+      titleEn: 'Openness',
+      descAr: 'ثقافة الشفافية والتعلم المستمر تمكننا من التطور والنمو مع عملائنا وشركائنا',
+      descEn: 'A culture of transparency and continuous learning enables us to evolve and grow with our clients and partners',
       color: 'bg-blue-100 text-blue-700'
     },
     {
       icon: Users,
-      titleAr: 'المصادقة متعددة العوامل',
-      titleEn: 'Multi-Factor Authentication',
-      descAr: 'نظام مصادقة متقدم يتضمن البصمة الحيوية والرموز المؤقتة والشهادات الرقمية',
-      descEn: 'Advanced authentication system including biometrics, time-based tokens, and digital certificates',
+      titleAr: 'الابتكار',
+      titleEn: 'Innovation',
+      descAr: 'ريادة الأفكار الجديدة والحلول المتطورة لمواجهة تحديات اليوم وبناء مستقبل أفضل',
+      descEn: 'Pioneering new ideas and cutting-edge solutions to meet today\'s challenges and build a better future',
       color: 'bg-green-100 text-green-700'
     },
     {
       icon: FileCheck,
-      titleAr: 'إدارة سجل التدقيق',
-      titleEn: 'Audit Trail Management',
-      descAr: 'تسجيل شامل لجميع العمليات مع طوابع زمنية وتوقيعات رقمية غير قابلة للتلاعب',
-      descEn: 'Comprehensive logging of all operations with timestamps and tamper-proof digital signatures',
+      titleAr: 'الدفء',
+      titleEn: 'Warmth',
+      descAr: 'بناء علاقات قوية وتعاونية مع عملائنا وشركائنا تقوم على الثقة والاحترام المتبادل',
+      descEn: 'Building strong, collaborative relationships with our clients and partners based on trust and mutual respect',
       color: 'bg-purple-100 text-purple-700'
     },
     {
       icon: Building2,
-      titleAr: 'ضمانات السيادة على البيانات',
-      titleEn: 'Data Sovereignty Guarantees',
-      descAr: 'ضمان بقاء جميع البيانات داخل الحدود السعودية مع امتثال كامل للوائح المحلية',
-      descEn: 'Guarantee that all data remains within Saudi borders with full compliance to local regulations',
+      titleAr: 'التعاون',
+      titleEn: 'Collaboration',
+      descAr: 'الشراكة مع العملاء للنجاح طويل الأمد من خلال العمل المشترك وتبادل الخبرات',
+      descEn: 'Partnering with clients for long-term success through collaborative work and knowledge sharing',
       color: 'bg-orange-100 text-orange-700'
     },
     {
       icon: Eye,
-      titleAr: 'المراقبة المستمرة',
-      titleEn: 'Continuous Monitoring',
-      descAr: 'نظام مراقبة ذكي يعمل على مدار الساعة للكشف عن التهديدات والاستجابة الفورية',
-      descEn: 'Intelligent 24/7 monitoring system for threat detection and immediate response',
+      titleAr: 'التميز في التنفيذ',
+      titleEn: 'Excellence in Execution',
+      descAr: 'التزامنا بأعلى معايير الجودة في تنفيذ جميع مشاريعنا وخدماتنا لضمان تحقيق أفضل النتائج',
+      descEn: 'Our commitment to the highest quality standards in executing all our projects and services to ensure the best results',
       color: 'bg-indigo-100 text-indigo-700'
     }
   ];
 
   const certifications = [
     {
-      name: 'ISO 27001',
-      nameAr: 'آيزو 27001',
-      description: 'International standard for information security management systems',
-      descriptionAr: 'المعيار الدولي لأنظمة إدارة أمن المعلومات',
-      validUntil: '2025-12-31',
+      name: 'Technology Consulting',
+      nameAr: 'الاستشارات التقنية',
+      description: 'Expert guidance in technology strategy and implementation',
+      descriptionAr: 'إرشاد خبير في استراتيجية التكنولوجيا والتنفيذ',
+      validUntil: 'Ongoing',
       logo: '🏆',
       color: 'bg-blue-500'
     },
     {
-      name: 'SOC 2 Type II',
-      nameAr: 'SOC 2 النوع الثاني',
-      description: 'Service Organization Control 2 compliance for security and availability',
-      descriptionAr: 'امتثال تحكم منظمة الخدمة 2 للأمان والتوفر',
-      validUntil: '2025-06-30',
+      name: 'Management Consulting',
+      nameAr: 'الاستشارات الإدارية',
+      description: 'Strategic management consulting for organizational excellence',
+      descriptionAr: 'استشارات إدارية استراتيجية للتميز التنظيمي',
+      validUntil: 'Ongoing',
       logo: '🛡️',
       color: 'bg-green-500'
     },
     {
-      name: 'Saudi Cloud Framework',
-      nameAr: 'إطار الحوسبة السحابية السعودي',
-      description: 'Compliance with Saudi Arabia Cloud Computing Regulatory Framework',
-      descriptionAr: 'الامتثال للإطار التنظيمي للحوسبة السحابية في المملكة العربية السعودية',
-      validUntil: '2026-03-15',
+      name: 'AI & Data Solutions',
+      nameAr: 'حلول الذكاء الاصطناعي والبيانات',
+      description: 'Cutting-edge AI and data management solutions',
+      descriptionAr: 'حلول متطورة للذكاء الاصطناعي وإدارة البيانات',
+      validUntil: 'Ongoing',
       logo: '☁️',
       color: 'bg-purple-500'
     },
     {
-      name: 'CITC Cybersecurity',
-      nameAr: 'الأمن السيبراني - هيئة الاتصالات',
-      description: 'Communications and Information Technology Commission cybersecurity compliance',
-      descriptionAr: 'امتثال الأمن السيبراني لهيئة الاتصالات وتقنية المعلومات',
-      validUntil: '2025-09-20',
+      name: 'Digital Transformation',
+      nameAr: 'التحول الرقمي',
+      description: 'Comprehensive digital transformation strategies and implementation',
+      descriptionAr: 'استراتيجيات التحول الرقمي الشاملة والتنفيذ',
+      validUntil: 'Ongoing',
       logo: '🔒',
       color: 'bg-red-500'
     },
     {
-      name: 'Government Data Protection',
-      nameAr: 'حماية البيانات الحكومية',
-      description: 'Saudi government data protection and privacy standards compliance',
-      descriptionAr: 'امتثال معايير حماية البيانات والخصوصية الحكومية السعودية',
-      validUntil: '2025-11-10',
+      name: 'Innovation Strategy',
+      nameAr: 'استراتيجية الابتكار',
+      description: 'Innovation frameworks and strategic planning for future growth',
+      descriptionAr: 'أطر الابتكار والتخطيط الاستراتيجي للنمو المستقبلي',
+      validUntil: 'Ongoing',
       logo: '🏛️',
       color: 'bg-orange-500'
     },
     {
-      name: 'Etimad Pre-approval',
-      nameAr: 'الموافقة المسبقة - اعتماد',
-      description: 'Pre-approved vendor status on Saudi government procurement platform',
-      descriptionAr: 'حالة المورد المعتمد مسبقاً على منصة المشتريات الحكومية السعودية',
-      validUntil: '2026-01-31',
+      name: 'Change Management',
+      nameAr: 'إدارة التغيير',
+      description: 'Expert change management and organizational development services',
+      descriptionAr: 'خدمات إدارة التغيير والتطوير التنظيمي المتخصصة',
+      validUntil: 'Ongoing',
       logo: '✅',
       color: 'bg-teal-500'
     }
@@ -120,40 +120,40 @@ const Security: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'د. أحمد المحمد',
-      nameEn: 'Dr. Ahmed Al-Mohammed',
-      position: 'مدير تقنية المعلومات',
-      positionEn: 'IT Director',
-      agency: 'وزارة الداخلية',
-      agencyEn: 'Ministry of Interior',
-      quote: 'منصة وثبة حولت طريقة تعاملنا مع البيانات الأمنية. الأمان والكفاءة لا مثيل لهما.',
-      quoteEn: 'Wathba platform transformed how we handle security data. The security and efficiency are unmatched.',
-      rating: 5,
-      image: '👨‍💼'
-    },
-    {
-      name: 'أ. فاطمة الزهراني',
-      nameEn: 'Ms. Fatima Al-Zahrani',
-      position: 'مديرة الخدمات الرقمية',
-      positionEn: 'Digital Services Director',
-      agency: 'وزارة الصحة',
-      agencyEn: 'Ministry of Health',
-      quote: 'تحسنت خدماتنا للمواطنين بشكل كبير. النظام آمن وسهل الاستخدام.',
-      quoteEn: 'Our citizen services improved significantly. The system is secure and user-friendly.',
+      name: 'أ. سارة العتيبي',
+      nameEn: 'Ms. Sarah Al-Otaibi',
+      position: 'مديرة التحول الرقمي',
+      positionEn: 'Digital Transformation Director',
+      agency: 'شركة تقنية رائدة',
+      agencyEn: 'Leading Tech Company',
+      quote: 'وثبة للاستشارات ساعدتنا في تحديد وتنفيذ حلول الذكاء الاصطناعي بطريقة عملية ومؤثرة.',
+      quoteEn: 'Wathbah Consulting helped us identify and implement AI solutions in a practical and impactful way.',
       rating: 5,
       image: '👩‍💼'
     },
     {
-      name: 'م. سعد العتيبي',
-      nameEn: 'Eng. Saad Al-Otaibi',
-      position: 'رئيس قسم الأمن السيبراني',
-      positionEn: 'Head of Cybersecurity',
-      agency: 'وزارة التعليم',
-      agencyEn: 'Ministry of Education',
-      quote: 'معايير الأمان في وثبة تفوق التوقعات. ثقة كاملة في حماية بيانات الطلاب.',
-      quoteEn: 'Security standards in Wathba exceed expectations. Complete confidence in protecting student data.',
+      name: 'د. محمد الشهري',
+      nameEn: 'Dr. Mohammed Al-Shehri',
+      position: 'الرئيس التنفيذي',
+      positionEn: 'Chief Executive Officer',
+      agency: 'مؤسسة صحية كبرى',
+      agencyEn: 'Major Healthcare Institution',
+      quote: 'الخبرة والاحترافية التي قدمتها وثبة في مشروع التحول الرقمي فاقت توقعاتنا.',
+      quoteEn: 'The expertise and professionalism that Wathbah provided in our digital transformation project exceeded our expectations.',
       rating: 5,
-      image: '👨‍🔧'
+      image: '👨‍💼'
+    },
+    {
+      name: 'أ. خالد النمر',
+      nameEn: 'Mr. Khalid Al-Nemer',
+      position: 'مدير الابتكار',
+      positionEn: 'Innovation Manager',
+      agency: 'شركة ناشئة تقنية',
+      agencyEn: 'Tech Startup',
+      quote: 'فريق وثبة ساعدنا في وضع استراتيجية واضحة للنمو والتوسع باستخدام التكنولوجيا.',
+      quoteEn: 'Wathbah team helped us develop a clear strategy for growth and expansion using technology.',
+      rating: 5,
+      image: '👨‍💻'
     }
   ];
 
@@ -170,17 +170,17 @@ const Security: React.FC = () => {
       <div className="center-content">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {language === 'ar' ? 'مركز الأمان والامتثال' : 'Security & Compliance Center'}
+            {language === 'ar' ? 'عن وثبة للاستشارات' : 'About Wathbah Consulting'}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {language === 'ar' 
-              ? 'معايير الأمان الأعلى للبيانات الحكومية مع ضمان الامتثال الكامل للوائح المحلية والدولية'
-              : 'Highest security standards for government data with full compliance to local and international regulations'
+              ? 'حيث تلتقي الشغف السعودي بالتميز العالمي كشركة استشارات تقنية وإدارية طموحة جداً'
+              : 'Where Saudi passion meets global excellence as a very ambitious technology and management consulting firm'
             }
           </p>
         </div>
 
-        {/* Security Features Grid */}
+        {/* Core Pillars Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {securityFeatures.map((feature, index) => (
             <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:scale-105">
@@ -209,7 +209,7 @@ const Security: React.FC = () => {
         {/* Compliance Certifications */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            {language === 'ar' ? 'الشهادات والاعتمادات' : 'Certifications & Accreditations'}
+            {language === 'ar' ? 'خدماتنا المتخصصة' : 'Our Specialized Services'}
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
@@ -231,7 +231,7 @@ const Security: React.FC = () => {
                     </CardHeader>
                     <CardContent className="text-center">
                       <Badge variant="outline" className="text-green-700 border-green-300">
-                        {language === 'ar' ? 'ساري حتى' : 'Valid until'} {cert.validUntil}
+                        {language === 'ar' ? 'متاح' : 'Available'} {cert.validUntil}
                       </Badge>
                     </CardContent>
                   </Card>
@@ -248,19 +248,19 @@ const Security: React.FC = () => {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500">
-                        {language === 'ar' ? 'تاريخ الانتهاء:' : 'Valid Until:'}
+                        {language === 'ar' ? 'الحالة:' : 'Status:'}
                       </span>
                       <Badge className="bg-green-100 text-green-800">
-                        {cert.validUntil}
+                        {language === 'ar' ? 'متاح' : 'Available'}
                       </Badge>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500">
-                        {language === 'ar' ? 'الحالة:' : 'Status:'}
+                        {language === 'ar' ? 'النوع:' : 'Type:'}
                       </span>
                       <Badge className="bg-green-100 text-green-800">
                         <CheckCircle className="w-3 h-3 mr-1" />
-                        {language === 'ar' ? 'نشط' : 'Active'}
+                        {language === 'ar' ? 'خدمة استشارية' : 'Consulting Service'}
                       </Badge>
                     </div>
                   </div>
@@ -273,14 +273,14 @@ const Security: React.FC = () => {
         {/* Government Partnership Showcase */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            {language === 'ar' ? 'شراكات حكومية موثوقة' : 'Trusted Government Partnerships'}
+            {language === 'ar' ? 'شهادات عملائنا' : 'Client Testimonials'}
           </h3>
           
           <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
             <div className="text-center mb-8">
-              <div className="text-4xl font-bold text-purple-700 mb-2">15+</div>
+              <div className="text-4xl font-bold text-purple-700 mb-2">100+</div>
               <div className="text-gray-600">
-                {language === 'ar' ? 'وكالة حكومية تثق بنا' : 'Government Agencies Trust Us'}
+                {language === 'ar' ? 'عميل راضٍ عن خدماتنا' : 'Satisfied Clients'}
               </div>
             </div>
             
@@ -349,12 +349,12 @@ const Security: React.FC = () => {
         <div className="bg-gradient-to-r from-purple-700 to-purple-800 rounded-2xl p-8 text-white">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold mb-4">
-              {language === 'ar' ? 'بوابة طلب العرض التوضيحي الآمن' : 'Secure Demo Request Portal'}
+              {language === 'ar' ? 'هل أنت مستعد لرفع مستوى عملك؟' : 'Ready to Elevate Your Business?'}
             </h3>
             <p className="text-purple-100 max-w-2xl mx-auto">
               {language === 'ar' 
-                ? 'احجز عرضاً توضيحياً مخصصاً لوكالتك الحكومية مع ضمان أعلى معايير الأمان والسرية'
-                : 'Book a customized demo for your government agency with guaranteed highest security and confidentiality standards'
+                ? 'تواصل معنا لمناقشة أهدافك وكيف يمكن لخبرتنا أن تساعدك في تحقيق النجاح'
+                : 'Contact us to discuss your goals and how our expertise can help you achieve success'
               }
             </p>
           </div>
@@ -365,25 +365,25 @@ const Security: React.FC = () => {
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
                   <CheckCircle className="h-5 w-5 text-green-400" />
                   <span className="text-purple-100">
-                    {language === 'ar' ? 'اتفاقية عدم إفشاء مضمنة' : 'Built-in NDA Agreement'}
+                    {language === 'ar' ? 'استشارة أولية مجانية' : 'Free Initial Consultation'}
                   </span>
                 </div>
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
                   <CheckCircle className="h-5 w-5 text-green-400" />
                   <span className="text-purple-100">
-                    {language === 'ar' ? 'تشفير متقدم للبيانات' : 'Advanced Data Encryption'}
+                    {language === 'ar' ? 'فريق خبراء متخصص' : 'Expert Specialized Team'}
                   </span>
                 </div>
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
                   <CheckCircle className="h-5 w-5 text-green-400" />
                   <span className="text-purple-100">
-                    {language === 'ar' ? 'مستوى تصريح أمني مخصص' : 'Custom Security Clearance Level'}
+                    {language === 'ar' ? 'حلول مخصصة لاحتياجاتك' : 'Customized Solutions for Your Needs'}
                   </span>
                 </div>
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
                   <CheckCircle className="h-5 w-5 text-green-400" />
                   <span className="text-purple-100">
-                    {language === 'ar' ? 'جدولة مرنة للاجتماعات' : 'Flexible Meeting Scheduling'}
+                    {language === 'ar' ? 'متابعة مستمرة للمشاريع' : 'Continuous Project Follow-up'}
                   </span>
                 </div>
               </div>
@@ -395,7 +395,7 @@ const Security: React.FC = () => {
                 className="bg-white text-purple-700 hover:bg-gray-50 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
               >
                 <Calendar className="mr-2 h-5 w-5" />
-                {language === 'ar' ? 'احجز عرضاً توضيحياً آمناً' : 'Book Secure Demo'}
+                {language === 'ar' ? 'ابدأ معنا' : 'Get Started'}
               </Button>
               <p className="text-purple-200 text-sm mt-4">
                 {language === 'ar' ? 'استجابة خلال 24 ساعة' : 'Response within 24 hours'}

@@ -15,10 +15,10 @@ const CitizenMetrics: React.FC = () => {
   });
 
   const targetValues = {
-    processing: 90,
-    waitTime: 75,
-    satisfaction: 95,
-    efficiency: 85
+    processing: 95,
+    waitTime: 85,
+    satisfaction: 98,
+    efficiency: 90
   };
 
   useEffect(() => {
@@ -64,8 +64,8 @@ const CitizenMetrics: React.FC = () => {
       icon: TrendingUp,
       value: animatedValues.processing,
       target: targetValues.processing,
-      labelAr: 'تسريع معالجة الطلبات',
-      labelEn: 'Faster Processing Times',
+      labelAr: 'معدل رضا العملاء',
+      labelEn: 'Client Satisfaction Rate',
       color: 'bg-green-100 text-green-700',
       progressColor: 'bg-green-500'
     },
@@ -73,8 +73,8 @@ const CitizenMetrics: React.FC = () => {
       icon: Clock,
       value: animatedValues.waitTime,
       target: targetValues.waitTime,
-      labelAr: 'تقليل أوقات الانتظار',
-      labelEn: 'Reduction in Wait Times',
+      labelAr: 'تحسن الكفاءة التشغيلية',
+      labelEn: 'Operational Efficiency Improvement',
       color: 'bg-blue-100 text-blue-700',
       progressColor: 'bg-blue-500'
     },
@@ -82,8 +82,8 @@ const CitizenMetrics: React.FC = () => {
       icon: Users,
       value: animatedValues.satisfaction,
       target: targetValues.satisfaction,
-      labelAr: 'رضا المواطنين',
-      labelEn: 'Citizen Satisfaction',
+      labelAr: 'نجاح تنفيذ المشاريع',
+      labelEn: 'Project Success Rate',
       color: 'bg-purple-100 text-purple-700',
       progressColor: 'bg-purple-500'
     },
@@ -91,8 +91,8 @@ const CitizenMetrics: React.FC = () => {
       icon: CheckCircle,
       value: animatedValues.efficiency,
       target: targetValues.efficiency,
-      labelAr: 'تحسن الكفاءة',
-      labelEn: 'Efficiency Improvement',
+      labelAr: 'تحقيق الأهداف الاستراتيجية',
+      labelEn: 'Strategic Goals Achievement',
       color: 'bg-orange-100 text-orange-700',
       progressColor: 'bg-orange-500'
     }
@@ -103,12 +103,12 @@ const CitizenMetrics: React.FC = () => {
       <div className="center-content">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {language === 'ar' ? 'تأثير إيجابي على خدمة المواطنين' : 'Positive Impact on Citizen Services'}
+            {language === 'ar' ? 'إنجازاتنا وتأثيرنا الإيجابي' : 'Our Achievements and Positive Impact'}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {language === 'ar' 
-              ? 'نتائج قابلة للقياس في تحسين الخدمات الحكومية وتجربة المواطنين'
-              : 'Measurable results in improving government services and citizen experience'
+              ? 'نتائج قابلة للقياس في تحسين أداء المؤسسات وتحقيق أهدافها الاستراتيجية'
+              : 'Measurable results in improving organizational performance and achieving strategic goals'
             }
           </p>
         </div>
@@ -161,21 +161,21 @@ const CitizenMetrics: React.FC = () => {
         <div className="bg-white rounded-2xl p-8 shadow-lg">
           <div className="grid lg:grid-cols-3 gap-8 items-center">
             <div className="text-center">
-              <div className="text-5xl font-bold text-purple-700 mb-2">2M+</div>
+              <div className="text-5xl font-bold text-purple-700 mb-2">100+</div>
               <div className="text-gray-600 font-medium">
-                {language === 'ar' ? 'مواطن يُخدم شهرياً' : 'Citizens Served Monthly'}
+                {language === 'ar' ? 'عميل راضٍ' : 'Satisfied Clients'}
               </div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold text-green-700 mb-2">50+</div>
               <div className="text-gray-600 font-medium">
-                {language === 'ar' ? 'وكالة حكومية شريكة' : 'Partner Government Agencies'}
+                {language === 'ar' ? 'مشروع ناجح' : 'Successful Projects'}
               </div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-700 mb-2">24/7</div>
+              <div className="text-5xl font-bold text-blue-700 mb-2">5+</div>
               <div className="text-gray-600 font-medium">
-                {language === 'ar' ? 'خدمة متواصلة' : 'Continuous Service'}
+                {language === 'ar' ? 'سنوات خبرة' : 'Years of Experience'}
               </div>
             </div>
           </div>

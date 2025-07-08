@@ -13,8 +13,8 @@ const About: React.FC = () => {
       icon: Eye,
       titleAr: 'رؤيتنا',
       titleEn: 'Our Vision',
-      descAr: 'أن نكون الشريك الاستراتيجي الرائد في التحول الرقمي، نمزج بين الخبرة المحلية والابتكار العالمي لبناء مستقبل رقمي مستدام يدعم رؤية المملكة 2030',
-      descEn: 'To be the leading strategic partner in digital transformation, blending local expertise with global innovation to build a sustainable digital future supporting Saudi Vision 2030',
+      descAr: 'أن نكون الشريك الأكثر قيمة للمؤسسات، مما يمكنها من التنقل في عصر الإمكانيات بثقة وابتكار',
+      descEn: 'To be the most value-delivering partner for organizations, enabling them to navigate the age of possibilities with confidence and innovation',
       color: 'from-blue-500 to-indigo-600',
       bgColor: 'bg-blue-50'
     },
@@ -22,44 +22,50 @@ const About: React.FC = () => {
       icon: Target,
       titleAr: 'مهمتنا',
       titleEn: 'Our Mission',
-      descAr: 'تمكين المؤسسات من تحقيق أهدافها الاستراتيجية من خلال حلول تقنية مبتكرة ومخصصة، مع ضمان أعلى معايير الجودة والأمان والامتثال',
-      descEn: 'Empowering organizations to achieve their strategic goals through innovative and customized technology solutions, ensuring the highest standards of quality, security, and compliance',
+      descAr: 'مساعدة عملائنا على إطلاق الإمكانات الكاملة للتقنيات المتطورة والمبتكرة، وتقديم القيمة في كل خطوة',
+      descEn: 'To help our clients unlock the full potential of cutting-edge and innovative technologies, delivering value at every step',
       color: 'from-purple-500 to-pink-600',
       bgColor: 'bg-purple-50'
     }
   ];
 
   const achievements = [
-    { number: '500+', label: language === 'ar' ? 'مشروع ناجح' : 'Successful Projects', icon: TrendingUp },
-    { number: '15+', label: language === 'ar' ? 'سنة خبرة' : 'Years Experience', icon: Award },
-    { number: '99.9%', label: language === 'ar' ? 'رضا العملاء' : 'Client Satisfaction', icon: Users },
-    { number: '24/7', label: language === 'ar' ? 'دعم متواصل' : 'Continuous Support', icon: Globe }
+    { number: '100+', label: language === 'ar' ? 'عميل راضٍ' : 'Satisfied Clients', icon: Users },
+    { number: '50+', label: language === 'ar' ? 'مشروع ناجح' : 'Successful Projects', icon: TrendingUp },
+    { number: '95%', label: language === 'ar' ? 'معدل رضا العملاء' : 'Client Satisfaction Rate', icon: Award },
+    { number: '5+', label: language === 'ar' ? 'سنوات خبرة' : 'Years Experience', icon: Globe }
   ];
 
   const values = [
     {
-      titleAr: 'الابتكار والتميز',
-      titleEn: 'Innovation & Excellence',
-      descAr: 'نسعى دائماً لتقديم حلول مبتكرة تتجاوز توقعات عملائنا',
-      descEn: 'We constantly strive to deliver innovative solutions that exceed our clients\' expectations'
+      titleAr: 'التنوع',
+      titleEn: 'Diversity',
+      descAr: 'مزيج من وجهات النظر العالمية والخبرة المحلية',
+      descEn: 'A mix of global perspectives and local expertise'
     },
     {
-      titleAr: 'الشراكة الاستراتيجية',
-      titleEn: 'Strategic Partnership',
-      descAr: 'نبني علاقات طويلة الأمد مع عملائنا كشركاء في النجاح',
-      descEn: 'We build long-term relationships with our clients as partners in success'
+      titleAr: 'الانفتاح',
+      titleEn: 'Openness',
+      descAr: 'ثقافة الشفافية والتعلم المستمر',
+      descEn: 'A culture of transparency and continuous learning'
     },
     {
-      titleAr: 'الجودة والموثوقية',
-      titleEn: 'Quality & Reliability',
-      descAr: 'نلتزم بأعلى معايير الجودة في جميع خدماتنا ومشاريعنا',
-      descEn: 'We commit to the highest quality standards in all our services and projects'
+      titleAr: 'الابتكار',
+      titleEn: 'Innovation',
+      descAr: 'ريادة الأفكار الجديدة والحلول المتطورة',
+      descEn: 'Pioneering new ideas and cutting-edge solutions'
     },
     {
-      titleAr: 'التطوير المستمر',
-      titleEn: 'Continuous Development',
-      descAr: 'نواكب أحدث التقنيات والاتجاهات لضمان تقديم أفضل الحلول',
-      descEn: 'We keep up with the latest technologies and trends to ensure the best solutions'
+      titleAr: 'الدفء',
+      titleEn: 'Warmth',
+      descAr: 'بناء علاقات قوية وتعاونية',
+      descEn: 'Building strong, collaborative relationships'
+    },
+    {
+      titleAr: 'التعاون',
+      titleEn: 'Collaboration',
+      descAr: 'الشراكة مع العملاء للنجاح طويل الأمد',
+      descEn: 'Partnering with clients for long-term success'
     }
   ];
 
@@ -75,13 +81,13 @@ const About: React.FC = () => {
           
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              {language === 'ar' ? 'وثبة للاستشارات' : 'Wathba Consulting'}
+              {language === 'ar' ? 'وثبة للاستشارات' : 'Wathbah Consulting'}
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {language === 'ar' 
-              ? 'شريكك الاستراتيجي في رحلة التحول الرقمي والابتكار التقني'
-              : 'Your strategic partner in digital transformation and technological innovation'
+              ? 'حيث تلتقي الشغف السعودي بالتميز العالمي كشركة استشارات تقنية وإدارية طموحة جداً'
+              : 'Where Saudi passion meets global excellence as a very ambitious technology and management consulting firm'
             }
           </p>
         </div>
@@ -157,10 +163,13 @@ const About: React.FC = () => {
 
         {/* Our Values */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">
-            {language === 'ar' ? 'قيمنا الأساسية' : 'Our Core Values'}
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-4">
+            {language === 'ar' ? 'أسسنا الخمسة' : 'Our Five Pillars'}
           </h3>
-          <div className="grid md:grid-cols-2 gap-6">
+          <p className="text-center text-gray-600 mb-8">
+            {language === 'ar' ? 'نعمل على خمسة ركائز أساسية:' : 'We operate on five core pillars:'}
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((value, index) => (
               <div key={index} className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <div className="flex items-start space-x-4 rtl:space-x-reverse">
@@ -182,21 +191,21 @@ const About: React.FC = () => {
         {/* Call to Action */}
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-8 text-white text-center">
           <h3 className="text-3xl font-bold mb-4">
-            {language === 'ar' ? 'هل أنت مستعد لبدء رحلة التحول؟' : 'Ready to Start Your Transformation Journey?'}
+            {language === 'ar' ? 'هل أنت مستعد لرفع مستوى عملك؟' : 'Ready to Elevate Your Business?'}
           </h3>
           <p className="text-indigo-100 mb-8 max-w-2xl mx-auto text-lg">
             {language === 'ar' 
-              ? 'انضم إلى مئات العملاء الذين حققوا نجاحاً استثنائياً مع حلولنا المبتكرة'
-              : 'Join hundreds of clients who achieved exceptional success with our innovative solutions'
+              ? 'تواصل معنا لمناقشة أهدافك وكيف يمكن لخبرتنا أن تساعدك في تحقيق النجاح'
+              : 'Contact us to discuss your goals and how our expertise can help you achieve success'
             }
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-indigo-700 hover:bg-gray-50 px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center space-x-2 rtl:space-x-reverse">
               <Sparkles className="h-5 w-5" />
-              <span>{language === 'ar' ? 'احجز استشارة مجانية' : 'Book Free Consultation'}</span>
+              <span>{language === 'ar' ? 'ابدأ معنا' : 'Get Started'}</span>
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center space-x-2 rtl:space-x-reverse">
-              <span>{language === 'ar' ? 'تصفح مشاريعنا' : 'View Our Projects'}</span>
+              <span>{language === 'ar' ? 'تواصل معنا' : 'Contact Us'}</span>
               <ArrowRight className={`h-5 w-5 ${language === 'ar' ? 'rotate-180' : ''}`} />
             </Button>
           </div>

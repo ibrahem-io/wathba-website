@@ -10,8 +10,8 @@ const Hero: React.FC = () => {
   const [isTyping, setIsTyping] = useState(true);
 
   const heroWords = language === 'ar' 
-    ? ['الذكاء الاصطناعي', 'الابتكار', 'المستقبل', 'التطوير']
-    : ['Innovation', 'AI Solutions', 'Digital Future', 'Excellence'];
+    ? ['الابتكار', 'التحول الرقمي', 'المستقبل', 'التميز']
+    : ['Innovation', 'Digital Transformation', 'Excellence', 'Partnership'];
 
   const fullTitle = language === 'ar' 
     ? 'ريادة المستقبل الرقمي'
@@ -49,35 +49,35 @@ const Hero: React.FC = () => {
   const innovations = [
     { 
       icon: Brain, 
-      text: language === 'ar' ? 'ذكاء اصطناعي متقدم' : 'Advanced AI',
+      text: language === 'ar' ? 'الوعي بالبيانات والذكاء الاصطناعي' : 'Data & AI Awareness',
       color: 'from-purple-500 to-pink-500',
-      description: language === 'ar' ? 'حلول ذكية مبتكرة' : 'Smart innovative solutions'
+      description: language === 'ar' ? 'فهم إمكانيات البيانات والذكاء الاصطناعي' : 'Understanding data and AI potential'
     },
     { 
       icon: Globe, 
-      text: language === 'ar' ? 'رؤية عالمية' : 'Global Vision',
+      text: language === 'ar' ? 'تحديد حالات الاستخدام' : 'AI Use Case Identification',
       color: 'from-blue-500 to-indigo-500',
-      description: language === 'ar' ? 'خبرة محلية وعالمية' : 'Local & global expertise'
+      description: language === 'ar' ? 'تحديد وتنفيذ الفرص المناسبة' : 'Identifying and implementing opportunities'
     },
     { 
       icon: Zap, 
-      text: language === 'ar' ? 'تحول رقمي' : 'Digital Transformation',
+      text: language === 'ar' ? 'إدارة المعرفة الذكية' : 'AI Knowledge Management',
       color: 'from-yellow-500 to-orange-500',
-      description: language === 'ar' ? 'تقنيات المستقبل' : 'Future technologies'
+      description: language === 'ar' ? 'أنظمة إدارة المعرفة المدعومة بالذكاء الاصطناعي' : 'AI-powered knowledge management systems'
     },
     { 
       icon: Star, 
-      text: language === 'ar' ? 'التميز والجودة' : 'Excellence & Quality',
+      text: language === 'ar' ? 'الاستشارات والتحول الرقمي' : 'Digital Transformation Consulting',
       color: 'from-green-500 to-emerald-500',
-      description: language === 'ar' ? 'معايير عالمية' : 'World-class standards'
+      description: language === 'ar' ? 'استشارات شاملة للتحول الرقمي' : 'Comprehensive digital transformation consulting'
     }
   ];
 
   const clientSectors = [
-    { name: language === 'ar' ? 'الشركات الكبرى' : 'Corporate Enterprises', count: '500+' },
-    { name: language === 'ar' ? 'الوكالات الحكومية' : 'Government Agencies', count: '50+' },
-    { name: language === 'ar' ? 'المؤسسات التعليمية' : 'Educational Institutions', count: '200+' },
-    { name: language === 'ar' ? 'المنظمات غير الربحية' : 'Non-Profit Organizations', count: '100+' }
+    { name: language === 'ar' ? 'الشركات الكبرى' : 'Corporate Enterprises', count: '100+' },
+    { name: language === 'ar' ? 'الجهات الحكومية' : 'Government Entities', count: '25+' },
+    { name: language === 'ar' ? 'الشركات الناشئة والتقنية' : 'Startups & Tech Companies', count: '50+' },
+    { name: language === 'ar' ? 'الرعاية الصحية وعلوم الحياة' : 'Healthcare & Life Sciences', count: '30+' }
   ];
 
   return (
@@ -132,7 +132,7 @@ const Hero: React.FC = () => {
           {/* Innovation Badge */}
           <div className="inline-flex items-center space-x-2 rtl:space-x-reverse bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-indigo-200 hover:shadow-lg transition-all duration-300">
             <Sparkles className="h-4 w-4 animate-pulse" />
-            <span>{language === 'ar' ? 'نمزج بين الابتكار المحلي والعالمي' : 'Blending Local & Global Innovation'}</span>
+            <span>{language === 'ar' ? 'حيث تلتقي الشغف السعودي بالتميز العالمي' : 'Where Saudi passion meets global excellence'}</span>
             <Brain className="h-4 w-4" />
           </div>
 
@@ -156,8 +156,8 @@ const Hero: React.FC = () => {
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               {language === 'ar' 
-                ? 'نمزج بين الابتكار المحلي والعالمي لتقديم حلول تقنية متطورة تدعم رؤية المملكة 2030 وتحقق التحول الرقمي المنشود'
-                : 'We blend local and global innovation to deliver cutting-edge technology solutions that support Saudi Vision 2030 and achieve digital transformation'
+                ? 'نمزج بين الابتكار المحلي والعالمي لتحويل المؤسسات. من خلال الحلول الذكية والتكنولوجيا المتطورة، نشارك عملاءنا في تحويل التحديات إلى فرص، مما يمكن نجاح الغد اليوم.'
+                : 'We blend local and global innovation to transform organizations. Through intelligent solutions and cutting-edge technology, we partner with our clients to turn challenges into opportunities, enabling tomorrow\'s success today.'
               }
             </p>
           </div>
@@ -190,7 +190,7 @@ const Hero: React.FC = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <Zap className="h-5 w-5 group-hover:animate-pulse" />
-              <span>{language === 'ar' ? 'ابدأ رحلة التحول' : 'Start Your Transformation'}</span>
+              <span>{language === 'ar' ? 'ابدأ معنا' : 'Get Started'}</span>
               <ArrowRight className={`h-5 w-5 group-hover:translate-x-1 transition-transform ${language === 'ar' ? 'rotate-180' : ''}`} />
             </Button>
             <Button
@@ -199,7 +199,7 @@ const Hero: React.FC = () => {
               className="group border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-10 py-4 text-lg font-medium rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 flex items-center space-x-3 rtl:space-x-reverse"
             >
               <Play className="h-5 w-5 group-hover:scale-110 transition-transform" />
-              <span>{language === 'ar' ? 'استكشف خدماتنا' : 'Explore Our Services'}</span>
+              <span>{language === 'ar' ? 'تعرف على خدماتنا' : 'Explore Our Services'}</span>
             </Button>
           </div>
 
@@ -227,19 +227,19 @@ const Hero: React.FC = () => {
             <div className="flex items-center space-x-2 rtl:space-x-reverse group">
               <CheckCircle className="h-4 w-4 text-green-600 group-hover:animate-pulse" />
               <span className="text-sm font-medium text-gray-600">
-                {language === 'ar' ? 'معتمد حكومياً' : 'Government Certified'}
+                {language === 'ar' ? 'شركة سعودية' : 'Saudi Company'}
               </span>
             </div>
             <div className="flex items-center space-x-2 rtl:space-x-reverse group">
               <Shield className="h-4 w-4 text-blue-600 group-hover:animate-pulse" />
               <span className="text-sm font-medium text-gray-600">
-                {language === 'ar' ? 'آمن ومشفر' : 'Secure & Encrypted'}
+                {language === 'ar' ? 'خبرة محلية وعالمية' : 'Local & Global Expertise'}
               </span>
             </div>
             <div className="flex items-center space-x-2 rtl:space-x-reverse group">
               <Star className="h-4 w-4 text-yellow-600 group-hover:animate-pulse" />
               <span className="text-sm font-medium text-gray-600">
-                {language === 'ar' ? 'جودة عالمية' : 'World-Class Quality'}
+                {language === 'ar' ? 'حلول متطورة' : 'Cutting-edge Solutions'}
               </span>
             </div>
           </div>
@@ -252,7 +252,7 @@ const Hero: React.FC = () => {
           <div className="flex items-center space-x-2 rtl:space-x-reverse">
             <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
             <span className="text-sm font-medium text-gray-700">
-              {language === 'ar' ? 'نشط الآن' : 'Active Now'}
+              {language === 'ar' ? 'شراكة نشطة' : 'Active Partnership'}
             </span>
           </div>
         </div>
@@ -274,7 +274,7 @@ const Hero: React.FC = () => {
           <div className="flex items-center space-x-2 rtl:space-x-reverse">
             <Globe className="h-4 w-4 text-blue-500 animate-pulse" />
             <span className="text-sm font-medium text-gray-700">
-              {language === 'ar' ? 'رؤية عالمية' : 'Global Vision'}
+              {language === 'ar' ? 'تميز عالمي' : 'Global Excellence'}
             </span>
           </div>
         </div>

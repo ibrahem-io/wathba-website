@@ -30,36 +30,36 @@ const TabNavigation: React.FC<TabNavigationProps> = ({ activeTab, setActiveTab }
     },
     {
       id: 'solutions',
-      labelAr: 'حلول الذكاء الاصطناعي',
-      labelEn: 'AI Solutions',
+      labelAr: 'خدماتنا',
+      labelEn: 'Our Services',
       icon: Cpu,
       gradient: 'from-purple-500 to-pink-600'
     },
     {
       id: 'metrics',
-      labelAr: 'المؤشرات',
-      labelEn: 'Metrics',
+      labelAr: 'إنجازاتنا',
+      labelEn: 'Our Impact',
       icon: TrendingUp,
       gradient: 'from-green-500 to-emerald-600'
     },
     {
       id: 'agencies',
-      labelAr: 'الوكالات',
-      labelEn: 'Agencies',
+      labelAr: 'من نخدم',
+      labelEn: 'Who We Serve',
       icon: Building2,
       gradient: 'from-orange-500 to-red-600'
     },
     {
       id: 'security',
-      labelAr: 'الأمان',
-      labelEn: 'Security',
+      labelAr: 'عن وثبة',
+      labelEn: 'About Wathbah',
       icon: Shield,
       gradient: 'from-red-500 to-rose-600'
     },
     {
       id: 'about',
-      labelAr: 'عن وثبة',
-      labelEn: 'About',
+      labelAr: 'رؤيتنا ومهمتنا',
+      labelEn: 'Vision & Mission',
       icon: Info,
       gradient: 'from-teal-500 to-cyan-600'
     },

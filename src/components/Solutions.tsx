@@ -34,75 +34,75 @@ const Solutions: React.FC = () => {
   const solutions = [
     {
       icon: Brain,
-      titleAr: 'حلول الذكاء الاصطناعي المتقدمة',
-      titleEn: 'Advanced AI Solutions',
-      descAr: 'تطوير وتنفيذ حلول الذكاء الاصطناعي المخصصة لتحسين العمليات وزيادة الكفاءة',
-      descEn: 'Develop and implement custom AI solutions to improve processes and increase efficiency',
+      titleAr: 'الوعي بالبيانات والذكاء الاصطناعي',
+      titleEn: 'Data & AI Awareness',
+      descAr: 'نساعد المؤسسات على فهم إمكانيات البيانات والذكاء الاصطناعي وكيفية تطبيقها بفعالية في بيئة العمل',
+      descEn: 'We help organizations understand the potential of data and AI and how to apply them effectively in the work environment',
       color: 'from-purple-500 to-pink-500',
       bgColor: 'bg-purple-50',
       category: 'ai',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      caseStudy: 'تحسين كفاءة العمليات بنسبة 85% لشركة رائدة'
+      features: ['Data Strategy', 'AI Readiness Assessment', 'Training & Workshops', 'Best Practices'],
+      caseStudy: 'تدريب أكثر من 200 موظف على أساسيات الذكاء الاصطناعي'
     },
     {
       icon: Globe,
-      titleAr: 'استراتيجيات التحول الرقمي',
-      titleEn: 'Digital Transformation Strategies',
-      descAr: 'وضع وتنفيذ استراتيجيات شاملة للتحول الرقمي تتماشى مع أهداف المؤسسة',
-      descEn: 'Develop and implement comprehensive digital transformation strategies aligned with organizational goals',
+      titleAr: 'تحديد وتنفيذ حالات استخدام الذكاء الاصطناعي',
+      titleEn: 'AI Use Case Identification & Implementation',
+      descAr: 'نحدد الفرص المناسبة لتطبيق الذكاء الاصطناعي في مؤسستك ونساعد في تنفيذها بنجاح',
+      descEn: 'We identify suitable opportunities for AI application in your organization and help implement them successfully',
       color: 'from-blue-500 to-indigo-500',
       bgColor: 'bg-blue-50',
-      category: 'digital',
-      features: ['Digital Strategy', 'Process Automation', 'Cloud Migration', 'Change Management'],
-      caseStudy: 'تحويل رقمي شامل لمؤسسة حكومية كبرى'
+      category: 'ai',
+      features: ['Use Case Discovery', 'Feasibility Analysis', 'Pilot Implementation', 'Scaling Strategy'],
+      caseStudy: 'تنفيذ 15 حالة استخدام للذكاء الاصطناعي في قطاع التجارة الإلكترونية'
     },
     {
       icon: Code,
-      titleAr: 'تطوير التطبيقات المخصصة',
-      titleEn: 'Custom Application Development',
-      descAr: 'تصميم وتطوير تطبيقات مخصصة تلبي احتياجات العمل الفريدة',
-      descEn: 'Design and develop custom applications that meet unique business needs',
+      titleAr: 'إدارة المعرفة المدعومة بالذكاء الاصطناعي',
+      titleEn: 'AI Powered Knowledge Management',
+      descAr: 'نطور أنظمة إدارة المعرفة الذكية التي تحسن من الكفاءة والإنتاجية في المؤسسة',
+      descEn: 'We develop intelligent knowledge management systems that improve efficiency and productivity in the organization',
       color: 'from-green-500 to-emerald-500',
       bgColor: 'bg-green-50',
-      category: 'development',
-      features: ['Web Applications', 'Mobile Apps', 'Enterprise Software', 'API Integration'],
-      caseStudy: 'تطوير منصة إدارة متكاملة لشركة تجارية'
+      category: 'ai',
+      features: ['Knowledge Base Design', 'AI Search & Retrieval', 'Content Management', 'User Experience'],
+      caseStudy: 'تطوير نظام إدارة معرفة ذكي لشركة استشارات كبرى'
     },
     {
       icon: Database,
-      titleAr: 'إدارة البيانات والتحليلات',
-      titleEn: 'Data Management & Analytics',
-      descAr: 'حلول شاملة لإدارة البيانات وتحليلها لاتخاذ قرارات مدروسة',
-      descEn: 'Comprehensive solutions for data management and analytics for informed decision-making',
+      titleAr: 'التحول الرقمي والاستشارات الإدارية',
+      titleEn: 'Digital Transformation & Management Consulting',
+      descAr: 'نقدم استشارات شاملة للتحول الرقمي واستراتيجيات الابتكار لتحقيق أهداف المؤسسة',
+      descEn: 'We provide comprehensive consulting for digital transformation and innovation strategies to achieve organizational goals',
       color: 'from-orange-500 to-red-500',
       bgColor: 'bg-orange-50',
-      category: 'ai',
-      features: ['Data Warehousing', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization'],
-      caseStudy: 'نظام تحليلات متقدم لمؤسسة مالية'
+      category: 'consulting',
+      features: ['Digital Strategy', 'Innovation Consulting', 'Change Management', 'Process Optimization'],
+      caseStudy: 'استراتيجية تحول رقمي شاملة لمؤسسة حكومية'
     },
     {
       icon: Cloud,
-      titleAr: 'الحلول السحابية المتقدمة',
-      titleEn: 'Advanced Cloud Solutions',
-      descAr: 'تصميم وتنفيذ بنية تحتية سحابية آمنة وقابلة للتوسع',
-      descEn: 'Design and implement secure and scalable cloud infrastructure',
+      titleAr: 'استراتيجيات التكنولوجيا والابتكار',
+      titleEn: 'Technology & Innovation Strategy',
+      descAr: 'نساعد في وضع استراتيجيات التكنولوجيا والابتكار التي تدعم النمو المستدام للمؤسسة',
+      descEn: 'We help develop technology and innovation strategies that support sustainable growth for the organization',
       color: 'from-cyan-500 to-blue-500',
       bgColor: 'bg-cyan-50',
-      category: 'digital',
-      features: ['Cloud Architecture', 'DevOps', 'Security', 'Cost Optimization'],
-      caseStudy: 'هجرة سحابية ناجحة لمؤسسة تعليمية'
+      category: 'consulting',
+      features: ['Technology Roadmap', 'Innovation Framework', 'Strategic Planning', 'Implementation Support'],
+      caseStudy: 'وضع استراتيجية تكنولوجيا 5 سنوات لشركة تصنيع'
     },
     {
       icon: Shield,
-      titleAr: 'الأمن السيبراني والامتثال',
-      titleEn: 'Cybersecurity & Compliance',
-      descAr: 'حماية شاملة للأصول الرقمية وضمان الامتثال للمعايير الدولية',
-      descEn: 'Comprehensive protection of digital assets and ensuring compliance with international standards',
+      titleAr: 'إدارة التغيير والتطوير التنظيمي',
+      titleEn: 'Change Management & Organizational Development',
+      descAr: 'نساعد المؤسسات في إدارة التغيير والتطوير التنظيمي لضمان نجاح المبادرات الجديدة',
+      descEn: 'We help organizations manage change and organizational development to ensure the success of new initiatives',
       color: 'from-red-500 to-rose-500',
       bgColor: 'bg-red-50',
       category: 'consulting',
-      features: ['Security Assessment', 'Compliance Management', 'Risk Analysis', 'Incident Response'],
-      caseStudy: 'تعزيز الأمن السيبراني لبنك رائد'
+      features: ['Change Strategy', 'Training Programs', 'Communication Plans', 'Performance Measurement'],
+      caseStudy: 'إدارة تغيير ناجحة لتحول رقمي في قطاع الخدمات المالية'
     }
   ];
 
@@ -123,17 +123,17 @@ const Solutions: React.FC = () => {
           
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              {language === 'ar' ? 'حلول تقنية' : 'Technology Solutions'}
+              {language === 'ar' ? 'خدماتنا' : 'Our Services'}
             </span>
             <br />
             <span className="text-gray-800">
-              {language === 'ar' ? 'مبتكرة ومخصصة' : 'Innovative & Custom'}
+              {language === 'ar' ? 'المتخصصة' : 'Specialized'}
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {language === 'ar' 
-              ? 'نقدم حلولاً تقنية متطورة ومخصصة تلبي احتياجات عملائنا وتحقق أهدافهم الاستراتيجية'
-              : 'We provide advanced and customized technology solutions that meet our clients\' needs and achieve their strategic goals'
+              ? 'نقدم خدمات متخصصة في التكنولوجيا والاستشارات الإدارية لمساعدة المؤسسات على تحقيق أهدافها'
+              : 'We provide specialized services in technology and management consulting to help organizations achieve their goals'
             }
           </p>
         </div>
@@ -268,21 +268,21 @@ const Solutions: React.FC = () => {
                 </span>
               </div>
               <h3 className="text-3xl font-bold mb-4 text-right">
-                {language === 'ar' ? 'هل تحتاج حلاً مخصصاً؟' : 'Need a Custom Solution?'}
+                {language === 'ar' ? 'هل أنت مستعد لرفع مستوى عملك؟' : 'Ready to Elevate Your Business?'}
               </h3>
               <p className="text-indigo-100 mb-6 text-right leading-relaxed">
                 {language === 'ar' 
-                  ? 'نعمل معك لتطوير حلول تقنية مبتكرة تلبي احتياجاتك الفريدة وتحقق أهدافك الاستراتيجية'
-                  : 'We work with you to develop innovative technology solutions that meet your unique needs and achieve your strategic goals'
+                  ? 'تواصل معنا لمناقشة أهدافك وكيف يمكن لخبرتنا أن تساعدك في تحقيق النجاح'
+                  : 'Contact us to discuss your goals and how our expertise can help you achieve success'
                 }
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button className="bg-white text-indigo-700 hover:bg-gray-50 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
-                  {language === 'ar' ? 'ابدأ مشروعك' : 'Start Your Project'}
+                  {language === 'ar' ? 'ابدأ معنا' : 'Get Started'}
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white/10 px-6 py-3 rounded-xl font-semibold">
-                  {language === 'ar' ? 'تحدث مع خبير' : 'Talk to Expert'}
+                  {language === 'ar' ? 'تواصل معنا' : 'Contact Us'}
                 </Button>
               </div>
             </div>
@@ -292,7 +292,7 @@ const Solutions: React.FC = () => {
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
                   <CheckCircle className="h-5 w-5 text-green-400" />
                   <span className="font-medium">
-                    {language === 'ar' ? 'استشارة مجانية' : 'Free Consultation'}
+                    {language === 'ar' ? 'استشارة أولية مجانية' : 'Free Initial Consultation'}
                   </span>
                 </div>
               </div>
@@ -300,7 +300,7 @@ const Solutions: React.FC = () => {
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
                   <TrendingUp className="h-5 w-5 text-blue-400" />
                   <span className="font-medium">
-                    {language === 'ar' ? 'تحليل احتياجات مفصل' : 'Detailed Needs Analysis'}
+                    {language === 'ar' ? 'تحليل شامل للاحتياجات' : 'Comprehensive Needs Analysis'}
                   </span>
                 </div>
               </div>
@@ -308,7 +308,7 @@ const Solutions: React.FC = () => {
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
                   <Users className="h-5 w-5 text-purple-400" />
                   <span className="font-medium">
-                    {language === 'ar' ? 'فريق متخصص' : 'Specialized Team'}
+                    {language === 'ar' ? 'فريق خبراء متخصص' : 'Expert Specialized Team'}
                   </span>
                 </div>
               </div>

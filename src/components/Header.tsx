@@ -37,7 +37,7 @@ const Header: React.FC = () => {
               <div className="relative bg-gradient-to-r from-indigo-600 to-purple-600 p-3 rounded-2xl group-hover:scale-110 transition-transform duration-300">
                 <img 
                   src="/ChatGPT Image Jul 7, 2025, 06_48_51 PM.png" 
-                  alt="Wathba Consulting" 
+                  alt="Wathbah Consulting" 
                   className="w-8 h-8 object-contain filter brightness-0 invert"
                 />
               </div>
@@ -45,12 +45,12 @@ const Header: React.FC = () => {
             <div className="flex flex-col">
               <div className="flex items-center space-x-2 rtl:space-x-reverse">
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-300">
-                  {language === 'ar' ? 'وثبة' : 'Wathba'}
+                  {language === 'ar' ? 'وثبة' : 'Wathbah'}
                 </h1>
                 <div className="flex items-center space-x-1">
                   <Sparkles className="h-4 w-4 text-indigo-600 animate-pulse" />
                   <span className="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full">
-                    {language === 'ar' ? 'استشارات' : 'Consulting'}
+                    {language === 'ar' ? 'للاستشارات' : 'Consulting'}
                   </span>
                 </div>
               </div>
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <Zap className="h-4 w-4 group-hover:animate-pulse relative z-10" />
-              <span className="relative z-10">{language === 'ar' ? 'اكتشف الابتكار' : 'Experience Innovation'}</span>
+              <span className="relative z-10">{language === 'ar' ? 'ابدأ معنا' : 'Get Started'}</span>
             </Button>
 
             {/* Mobile Menu Button */}
